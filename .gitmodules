@@ -1,0 +1,4 @@
+[submodule "model_compiler"]
+	path = model_compiler
+	url = https://github.com/Pro/UA-ModelCompiler
+	branch = hotfix/mono_build

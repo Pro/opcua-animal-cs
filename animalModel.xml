@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModelDesign
+        xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ua="http://opcfoundation.org/UA/"
+        xmlns:ANIMAL="https://opcua.rocks/UA/animal/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        TargetNamespace="https://opcua.rocks/UA/animal/"
+        TargetXmlNamespace="https://opcua.rocks/UA/animal/"
+        TargetVersion="0.9.0"
+        TargetPublicationDate="2019-04-01T00:00:00Z"
+        xmlns="http://opcfoundation.org/UA/ModelDesign.xsd">
+
+    <Namespaces>
+        <Namespace Name="animal" Prefix="animal" XmlNamespace="https://opcua.rocks/UA/animal/Types.xsd" XmlPrefix="animal">https://opcua.rocks/UA/animal/</Namespace>
+        <Namespace Name="OpcUa" Version="1.03" PublicationDate="2013-12-02T00:00:00Z" Prefix="Opc.Ua" InternalPrefix="Opc.Ua.Server" XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd" XmlPrefix="OpcUa">http://opcfoundation.org/UA/</Namespace>
+    </Namespaces>
+
+    <!-- ### Reference Types ###-->
+
+
+    <!-- ### Object Types ###-->
+
+    <ObjectType SymbolicName="ANIMAL:MammalType" BaseType="ua:BaseObjectType" IsAbstract="true" SupportsEvents="true">
+
+    </ObjectType>
+
+    <!-- ### Variable Types ###-->
+
+</ModelDesign>

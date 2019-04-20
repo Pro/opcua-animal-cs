@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uax:ListOfNodeState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">
+  <uax:NamespaceUris>
+    <uax:NamespaceUri>https://opcua.rocks/UA/animal/</uax:NamespaceUri>
+  </uax:NamespaceUris>
+  <MammalType xmlns="https://opcua.rocks/UA/animal/">
+    <uax:NodeClass>ObjectType_8</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15001</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>MammalType</uax:Name>
+    </uax:BrowseName>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=58</uax:Identifier>
+    </uax:SuperTypeId>
+    <uax:IsAbstract>true</uax:IsAbstract>
+  </MammalType>
+</uax:ListOfNodeState>
