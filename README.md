@@ -13,7 +13,7 @@ git submodule update --init --recursive
 
 ### Windows
 
-On Windows you need to have at least the Visual Studio Free edition.
+On Windows you need to have at least the [Visual Studio Community edition](https://visualstudio.microsoft.com/vs/community/), which is free.
 
 Open Visual Studio and then open the .sln Project in the `model_compiler` subfolder.
 
