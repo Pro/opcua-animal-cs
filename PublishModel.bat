@@ -9,21 +9,17 @@ REM ****************************************************************************
 SETLOCAL
 
 SET DIR=%~dp0
-set MODELCOMPILER=.model_compiler\Bin\Debug\Opc.Ua.ModelCompiler.exe
+set MODELCOMPILER=%DIR%model_compiler\Bin\Debug\Opc.Ua.ModelCompiler.exe
 set SOURCE=%1
 set TARGET=%2
-set OUTPUT=..\nodesets
-
-IF NOT "%3"=="" (set OUTPUT=%OUTPUT%\%3) else (set OUTPUT=%OUTPUT%\master)
-IF NOT "%3"=="" set VERSION=-version %3
-IF NOT "%4"=="" set EXCLUDE=-exclude %4
+set OUTPUT=%3
 
 ECHO Building Model %TARGET%
 IF NOT EXIST "%OUTPUT%\%TARGET%" MKDIR "%OUTPUT%\%TARGET%"
-ECHO %MODELCOMPILER% %VERSION% %EXCLUDE% -d2 "%SOURCE%.xml" -cg "%SOURCE%.csv" -o2 "%OUTPUT%\%TARGET%\"
+ECHO %MODELCOMPILER% -console -d2 "%SOURCE%.xml" -cg "%SOURCE%.csv" -o2 "%OUTPUT%\%TARGET%\"
 pushd .
 cd %DIR%/model_compiler
-%MODELCOMPILER% %VERSION% %EXCLUDE% -d2 "%SOURCE%.xml" -cg "%SOURCE%.csv" -o2 "%OUTPUT%\%TARGET%\"
+%MODELCOMPILER% -console -d2 "%SOURCE%.xml" -cg "%SOURCE%.csv" -o2 "%OUTPUT%\%TARGET%\"
 popd
 IF %ERRORLEVEL% NEQ 0 ( ECHO Failed %TARGET% & EXIT /B 3 )
 
