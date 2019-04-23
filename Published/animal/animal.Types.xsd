@@ -7,4 +7,22 @@
 >
   <xs:import namespace="http://opcfoundation.org/UA/2008/02/Types.xsd" />
 
+  <xs:complexType name="AnimalSound">
+    <xs:annotation>
+      <xs:documentation>Sound of an animal</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Verb" type="xs:string" minOccurs="0" nillable="true" />
+      <xs:element name="AudioFile" type="xs:string" minOccurs="0" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnimalSound" type="tns:AnimalSound" />
+
+  <xs:complexType name="ListOfAnimalSound">
+    <xs:sequence>
+      <xs:element name="AnimalSound" type="tns:AnimalSound" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfAnimalSound" type="tns:ListOfAnimalSound" nillable="true"></xs:element>
+
 </xs:schema>

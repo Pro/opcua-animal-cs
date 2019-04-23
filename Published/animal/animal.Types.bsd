@@ -8,4 +8,10 @@
 >
   <opc:Import Namespace="http://opcfoundation.org/UA/" Location="Opc.Ua.BinarySchema.bsd"/>
 
+  <opc:StructuredType Name="AnimalSound" BaseType="ua:ExtensionObject">
+    <opc:Documentation>Sound of an animal</opc:Documentation>
+    <opc:Field Name="Verb" TypeName="opc:String" />
+    <opc:Field Name="AudioFile" TypeName="opc:String" />
+  </opc:StructuredType>
+
 </opc:TypeDictionary>

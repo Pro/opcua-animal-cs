@@ -17,15 +17,154 @@
         <Namespace Name="OpcUa" Version="1.03" PublicationDate="2013-12-02T00:00:00Z" Prefix="Opc.Ua" InternalPrefix="Opc.Ua.Server" XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd" XmlPrefix="OpcUa">http://opcfoundation.org/UA/</Namespace>
     </Namespaces>
 
-    <!-- ### Reference Types ###-->
 
+
+    <!-- ### Reference Types ###-->
 
     <!-- ### Object Types ###-->
 
-    <ObjectType SymbolicName="ANIMAL:MammalType" BaseType="ua:BaseObjectType" IsAbstract="true" SupportsEvents="true">
+    <!-- AnimalType with mandatory name -->
+    <ObjectType SymbolicName="ANIMAL:AnimalType" BaseType="ua:BaseObjectType" IsAbstract="true" SupportsEvents="true">
+        <Description>Base type for all animals</Description>
+        <Children>
+            <Property SymbolicName="ANIMAL:Name" DataType="ua:String" ValueRank="Scalar" ModellingRule="Mandatory">
+                <Description>Name of the animal</Description>
+            </Property>
+        </Children>
+    </ObjectType>
 
+    <!-- MammalType subtype of AnimalType with mandatory legs and sound -->
+    <ObjectType SymbolicName="ANIMAL:MammalType" BaseType="ANIMAL:AnimalType" IsAbstract="true" SupportsEvents="true">
+        <Description>Base type for all mammals</Description>
+        <Children>
+            <Property SymbolicName="ANIMAL:LegCount" DataType="ua:UInt32" ValueRank="Scalar" ModellingRule="Mandatory">
+                <Description>Number of legs the animal has</Description>
+            </Property>
+            <Variable SymbolicName="ANIMAL:Sound" TypeDefinition="ANIMAL:AnimalSoundType" DataType="ANIMAL:AnimalSound" ModellingRule="Optional">
+                <Description>The sound the animal makes</Description>
+            </Variable>
+        </Children>
+    </ObjectType>
+
+    <!-- CatType as a subtype of a MammalType -->
+    <ObjectType SymbolicName="ANIMAL:CatType" BaseType="ANIMAL:MammalType" SupportsEvents="true">
+        <Description>A cat mammal</Description>
+    </ObjectType>
+
+    <!-- DogType as subtype of a MammalType -->
+    <ObjectType SymbolicName="ANIMAL:DogType" BaseType="ANIMAL:MammalType" SupportsEvents="true">
+        <Description>A dog mammal</Description>
+        <Children>
+            <Property SymbolicName="ANIMAL:Weight" DataType="ua:Double" ValueRank="Scalar" ModellingRule="Optional">
+                <Description>Weight of the dog in KG</Description>
+            </Property>
+        </Children>
     </ObjectType>
 
     <!-- ### Variable Types ###-->
+
+    <!-- AnimalSoundType -->
+    <VariableType SymbolicName="ANIMAL:AnimalSoundType" DataType="ANIMAL:AnimalSound" BaseType="ua:BaseDataVariableType" ValueRank="Scalar" ExposesItsChildren="true">
+        <Description>Represents the sound of an animal</Description>
+        <Children>
+            <Variable SymbolicName="ANIMAL:Verb" TypeDefinition="ua:BaseDataVariableType" DataType="ua:String" ModellingRule="Mandatory">
+                <Description>Verb describing the animal sound</Description>
+            </Variable>
+            <Variable SymbolicName="ANIMAL:AudioFile" TypeDefinition="ua:BaseDataVariableType" DataType="ua:String" ModellingRule="Optional">
+                <Description>URL to an audio file for the sound</Description>
+            </Variable>
+        </Children>
+    </VariableType>
+
+    <!-- ### Data Types ###-->
+
+    <!-- AnimalSound -->
+    <DataType SymbolicName="ANIMAL:AnimalSound" BaseType="ua:Structure">
+        <Description>Sound of an animal</Description>
+        <Fields>
+            <Field Name="Verb" DataType="ua:String">
+                <Description>Sound Verb</Description>
+            </Field>
+            <Field Name="AudioFile" DataType="ua:String">
+                <Description>URL to an audio file</Description>
+            </Field>
+        </Fields>
+    </DataType>
+
+    <!-- ### Objects ###-->
+    <Object SymbolicName="ANIMAL:AnimalSet" TypeDefinition="ua:BaseObjectType">
+        <Description>Contains all instances of animals</Description>
+        <References>
+            <Reference IsInverse="true">
+                <ReferenceType>ua:Organizes</ReferenceType>
+                <TargetId>ua:ObjectsFolder</TargetId>
+            </Reference>
+        </References>
+    </Object>
+
+    <Object SymbolicName="ANIMAL:Cat" TypeDefinition="ANIMAL:CatType">
+        <Description>A Cat named Cattie</Description>
+        <References>
+            <Reference IsInverse="true">
+                <ReferenceType>ua:Organizes</ReferenceType>
+                <TargetId>ANIMAL:AnimalSet</TargetId>
+            </Reference>
+        </References>
+        <Children>
+            <Property SymbolicName="ANIMAL:Name" DataType="ua:String" AccessLevel="Read">
+                <DefaultValue>
+                    <uax:String>Cattie</uax:String>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="ANIMAL:LegCount" DataType="ua:UInt32" AccessLevel="Read">
+                <DefaultValue>
+                    <uax:UInt32>4</uax:UInt32>
+                </DefaultValue>
+            </Property>
+        </Children>
+    </Object>
+
+    <Object SymbolicName="ANIMAL:Dog" TypeDefinition="ANIMAL:DogType">
+        <Description>A dog named Wuffy</Description>
+        <References>
+            <Reference IsInverse="true">
+                <ReferenceType>ua:Organizes</ReferenceType>
+                <TargetId>ANIMAL:AnimalSet</TargetId>
+            </Reference>
+        </References>
+        <Children>
+            <Property SymbolicName="ANIMAL:Name" DataType="ua:String" AccessLevel="Read">
+                <DefaultValue>
+                    <uax:String>Wuffy</uax:String>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="ANIMAL:LegCount" DataType="ua:UInt32" AccessLevel="Read">
+                <DefaultValue>
+                    <uax:UInt32>4</uax:UInt32>
+                </DefaultValue>
+            </Property>
+            <Variable SymbolicName="ANIMAL:Sound"
+                      DataType="ANIMAL:AnimalSound"
+                      TypeDefinition="ANIMAL:AnimalSoundType"
+                      ModellingRule="Mandatory" ValueRank="Scalar" AccessLevel="Read">
+                <Description>Sound of the dog</Description>
+                <DefaultValue>
+                    <uax:ExtensionObject>
+                        <uax:TypeId>
+                            <!-- we can not use ANIMAL:AnimalSound of the DataType here. The model compiler does not replace it.
+                            Therefore we need to use the resulting node id: ns=1;i=15025-->
+                            <uax:Identifier>ns=1;i=15025</uax:Identifier>
+                        </uax:TypeId>
+                        <uax:Body>
+                            <Frame xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+                                <Verb>bark</Verb>
+                                <AudioFile>https://en.wikipedia.org/wiki/File:Barking_of_a_dog_2.ogg</AudioFile>
+                            </Frame>
+                        </uax:Body>
+                    </uax:ExtensionObject>
+                </DefaultValue>
+            </Variable>
+        </Children>
+    </Object>
 
 </ModelDesign>
