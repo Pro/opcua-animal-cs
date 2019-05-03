@@ -1,6 +1,9 @@
 # opcua-animal-cs
 OPC UA Companion Specification for Animals - A Tutorial
 
+The full tutorial for this repository can be found here:
+https://opcua.rocks/custom-information-models/
+
 ## How to initialize
 
 First you need to clone and initialize this git repository:
