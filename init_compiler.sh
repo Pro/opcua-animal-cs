@@ -9,6 +9,8 @@ pushd $(pwd)
 cd $DIR/model_compiler
 wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 mono nuget.exe install -OutputDirectory packages ModelCompiler/packages.config
+
+# On older systems you may need to use xbuild instead of msbuild
 msbuild "ModelCompiler Solution.sln" /p:TargetFrameworkVersion="v4.5"
 
 popd
