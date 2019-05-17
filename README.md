@@ -4,6 +4,9 @@ OPC UA Companion Specification for Animals - A Tutorial
 The full tutorial for this repository can be found here:
 https://opcua.rocks/custom-information-models/
 
+A sample OPC UA Server using this CS can be found here:
+https://github.com/Pro/opcua-animal-server
+
 ## How to initialize
 
 First you need to clone and initialize this git repository:
