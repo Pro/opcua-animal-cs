@@ -252,10 +252,10 @@
           <Identifier>ns=1;i=15025</Identifier>
         </TypeId>
         <Body>
-          <Frame xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+          <AnimalSound xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
             <Verb>bark</Verb>
             <AudioFile>https://en.wikipedia.org/wiki/File:Barking_of_a_dog_2.ogg</AudioFile>
-          </Frame>
+          </AnimalSound>
         </Body>
       </ExtensionObject>
     </Value>
