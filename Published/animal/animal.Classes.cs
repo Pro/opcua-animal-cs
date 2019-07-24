@@ -90,9 +90,9 @@ namespace animal
 
         #region Initialization String
         private const string InitializationString =
-           "AQAAAB4AAABodHRwczovL29wY3VhLnJvY2tzL1VBL2FuaW1hbC//////hGCAAAEAAAABABIAAABBbmlt" +
-           "YWxUeXBlSW5zdGFuY2UBAZk6AQGZOgH/////AQAAADVgiQoCAAAAAQAEAAAATmFtZQEBmjoDAAAAABIA" +
-           "AABOYW1lIG9mIHRoZSBhbmltYWwALgBEmjoAAAAM/////wEB/////wAAAAA=";
+           "AQAAAB4AAABodHRwczovL29wY3VhLnJvY2tzL1VBL2FuaW1hbC//////hGCAAgEAAAABABIAAABBbmlt" +
+           "YWxUeXBlSW5zdGFuY2UBAZk6AQGZOpk6AAAB/////wEAAAA1YIkKAgAAAAEABAAAAE5hbWUBAZo6AwAA" +
+           "AAASAAAATmFtZSBvZiB0aGUgYW5pbWFsAC4ARJo6AAAADP////8BAf////8AAAAA";
         #endregion
         #endif
         #endregion
@@ -257,14 +257,14 @@ namespace animal
            "bmltYWwgc291bmQALwA/pjoAAAAM/////wEB/////wAAAAA=";
 
         private const string InitializationString =
-           "AQAAAB4AAABodHRwczovL29wY3VhLnJvY2tzL1VBL2FuaW1hbC//////hGCAAAEAAAABABIAAABNYW1t" +
-           "YWxUeXBlSW5zdGFuY2UBAZs6AQGbOgH/////AwAAADVgiQoCAAAAAQAEAAAATmFtZQEBnDoDAAAAABIA" +
-           "AABOYW1lIG9mIHRoZSBhbmltYWwALgBEnDoAAAAM/////wEB/////wAAAAA1YIkKAgAAAAEACAAAAExl" +
-           "Z0NvdW50AQGdOgMAAAAAHQAAAE51bWJlciBvZiBsZWdzIHRoZSBhbmltYWwgaGFzAC4ARJ06AAAAB///" +
-           "//8BAf////8AAAAANWCJCgIAAAABAAUAAABTb3VuZAEBpToDAAAAABoAAABUaGUgc291bmQgdGhlIGFu" +
-           "aW1hbCBtYWtlcwAvAQGuOqU6AAABAbE6/////wEB/////wEAAAA1YIkKAgAAAAEABAAAAFZlcmIBAaY6" +
-           "AwAAAAAgAAAAVmVyYiBkZXNjcmliaW5nIHRoZSBhbmltYWwgc291bmQALwA/pjoAAAAM/////wEB////" +
-           "/wAAAAA=";
+           "AQAAAB4AAABodHRwczovL29wY3VhLnJvY2tzL1VBL2FuaW1hbC//////hGCAAgEAAAABABIAAABNYW1t" +
+           "YWxUeXBlSW5zdGFuY2UBAZs6AQGbOps6AAAB/////wMAAAA1YIkKAgAAAAEABAAAAE5hbWUBAZw6AwAA" +
+           "AAASAAAATmFtZSBvZiB0aGUgYW5pbWFsAC4ARJw6AAAADP////8BAf////8AAAAANWCJCgIAAAABAAgA" +
+           "AABMZWdDb3VudAEBnToDAAAAAB0AAABOdW1iZXIgb2YgbGVncyB0aGUgYW5pbWFsIGhhcwAuAESdOgAA" +
+           "AAf/////AQH/////AAAAADVgiQoCAAAAAQAFAAAAU291bmQBAaU6AwAAAAAaAAAAVGhlIHNvdW5kIHRo" +
+           "ZSBhbmltYWwgbWFrZXMALwEBrjqlOgAAAQGxOv////8BAf////8BAAAANWCJCgIAAAABAAQAAABWZXJi" +
+           "AQGmOgMAAAAAIAAAAFZlcmIgZGVzY3JpYmluZyB0aGUgYW5pbWFsIHNvdW5kAC8AP6Y6AAAADP////8B" +
+           "Af////8AAAAA";
         #endregion
         #endif
         #endregion
@@ -464,11 +464,11 @@ namespace animal
 
         #region Initialization String
         private const string InitializationString =
-           "AQAAAB4AAABodHRwczovL29wY3VhLnJvY2tzL1VBL2FuaW1hbC//////hGCAAAEAAAABAA8AAABDYXRU" +
-           "eXBlSW5zdGFuY2UBAZ46AQGeOgH/////AgAAADVgiQoCAAAAAQAEAAAATmFtZQEBnzoDAAAAABIAAABO" +
-           "YW1lIG9mIHRoZSBhbmltYWwALgBEnzoAAAAM/////wEB/////wAAAAA1YIkKAgAAAAEACAAAAExlZ0Nv" +
-           "dW50AQGgOgMAAAAAHQAAAE51bWJlciBvZiBsZWdzIHRoZSBhbmltYWwgaGFzAC4ARKA6AAAAB/////8B" +
-           "Af////8AAAAA";
+           "AQAAAB4AAABodHRwczovL29wY3VhLnJvY2tzL1VBL2FuaW1hbC//////hGCAAgEAAAABAA8AAABDYXRU" +
+           "eXBlSW5zdGFuY2UBAZ46AQGeOp46AAAB/////wIAAAA1YIkKAgAAAAEABAAAAE5hbWUBAZ86AwAAAAAS" +
+           "AAAATmFtZSBvZiB0aGUgYW5pbWFsAC4ARJ86AAAADP////8BAf////8AAAAANWCJCgIAAAABAAgAAABM" +
+           "ZWdDb3VudAEBoDoDAAAAAB0AAABOdW1iZXIgb2YgbGVncyB0aGUgYW5pbWFsIGhhcwAuAESgOgAAAAf/" +
+           "////AQH/////AAAAAA==";
         #endregion
         #endif
         #endregion
@@ -549,12 +549,12 @@ namespace animal
            "AAA=";
 
         private const string InitializationString =
-           "AQAAAB4AAABodHRwczovL29wY3VhLnJvY2tzL1VBL2FuaW1hbC//////hGCAAAEAAAABAA8AAABEb2dU" +
-           "eXBlSW5zdGFuY2UBAaE6AQGhOgH/////AwAAADVgiQoCAAAAAQAEAAAATmFtZQEBojoDAAAAABIAAABO" +
-           "YW1lIG9mIHRoZSBhbmltYWwALgBEojoAAAAM/////wEB/////wAAAAA1YIkKAgAAAAEACAAAAExlZ0Nv" +
-           "dW50AQGjOgMAAAAAHQAAAE51bWJlciBvZiBsZWdzIHRoZSBhbmltYWwgaGFzAC4ARKM6AAAAB/////8B" +
-           "Af////8AAAAANWCJCgIAAAABAAYAAABXZWlnaHQBAaQ6AwAAAAAXAAAAV2VpZ2h0IG9mIHRoZSBkb2cg" +
-           "aW4gS0cALgBEpDoAAAAL/////wEB/////wAAAAA=";
+           "AQAAAB4AAABodHRwczovL29wY3VhLnJvY2tzL1VBL2FuaW1hbC//////hGCAAgEAAAABAA8AAABEb2dU" +
+           "eXBlSW5zdGFuY2UBAaE6AQGhOqE6AAAB/////wMAAAA1YIkKAgAAAAEABAAAAE5hbWUBAaI6AwAAAAAS" +
+           "AAAATmFtZSBvZiB0aGUgYW5pbWFsAC4ARKI6AAAADP////8BAf////8AAAAANWCJCgIAAAABAAgAAABM" +
+           "ZWdDb3VudAEBozoDAAAAAB0AAABOdW1iZXIgb2YgbGVncyB0aGUgYW5pbWFsIGhhcwAuAESjOgAAAAf/" +
+           "////AQH/////AAAAADVgiQoCAAAAAQAGAAAAV2VpZ2h0AQGkOgMAAAAAFwAAAFdlaWdodCBvZiB0aGUg" +
+           "ZG9nIGluIEtHAC4ARKQ6AAAAC/////8BAf////8AAAAA";
         #endregion
         #endif
         #endregion
@@ -734,11 +734,11 @@ namespace animal
            "AAz/////AQH/////AAAAAA==";
 
         private const string InitializationString =
-           "AQAAAB4AAABodHRwczovL29wY3VhLnJvY2tzL1VBL2FuaW1hbC//////FWCJAAIAAAABABcAAABBbmlt" +
-           "YWxTb3VuZFR5cGVJbnN0YW5jZQEBrjoBAa46AQGxOv////8BAf////8CAAAANWCJCgIAAAABAAQAAABW" +
-           "ZXJiAQGvOgMAAAAAIAAAAFZlcmIgZGVzY3JpYmluZyB0aGUgYW5pbWFsIHNvdW5kAC8AP686AAAADP//" +
-           "//8BAf////8AAAAANWCJCgIAAAABAAkAAABBdWRpb0ZpbGUBAbA6AwAAAAAiAAAAVVJMIHRvIGFuIGF1" +
-           "ZGlvIGZpbGUgZm9yIHRoZSBzb3VuZAAvAD+wOgAAAAz/////AQH/////AAAAAA==";
+           "AQAAAB4AAABodHRwczovL29wY3VhLnJvY2tzL1VBL2FuaW1hbC//////FWCJAgIAAAABABcAAABBbmlt" +
+           "YWxTb3VuZFR5cGVJbnN0YW5jZQEBrjoBAa46rjoAAAEBsTr/////AQH/////AgAAADVgiQoCAAAAAQAE" +
+           "AAAAVmVyYgEBrzoDAAAAACAAAABWZXJiIGRlc2NyaWJpbmcgdGhlIGFuaW1hbCBzb3VuZAAvAD+vOgAA" +
+           "AAz/////AQH/////AAAAADVgiQoCAAAAAQAJAAAAQXVkaW9GaWxlAQGwOgMAAAAAIgAAAFVSTCB0byBh" +
+           "biBhdWRpbyBmaWxlIGZvciB0aGUgc291bmQALwA/sDoAAAAM/////wEB/////wAAAAA=";
         #endregion
         #endif
         #endregion
